@@ -7,7 +7,7 @@ Summary:	SMACK userspace package
 Summary(pl.UTF-8):	Pakiet SMACK dla przestrzeni użytkownika
 Name:		smack
 Version:	1.1.0
-Release:	1
+Release:	2
 License:	LGPL v2.1
 Group:		Libraries
 #Source0Download: https://github.com/smack-team/smack/releases
