@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
 %bcond_without	static_libs	# don't build static libraries
-#
+
 Summary:	SMACK userspace package
 Summary(pl.UTF-8):	Pakiet SMACK dla przestrzeni użytkownika
 Name:		smack
@@ -77,6 +77,9 @@ Statyczna biblioteka SMACK.
 Summary:	SMACK API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki SMACK
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for SMACK library.
