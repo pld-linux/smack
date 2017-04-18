@@ -6,13 +6,13 @@
 Summary:	SMACK userspace package
 Summary(pl.UTF-8):	Pakiet SMACK dla przestrzeni użytkownika
 Name:		smack
-Version:	1.1.0
-Release:	2
+Version:	1.3.0
+Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 #Source0Download: https://github.com/smack-team/smack/releases
 Source0:	https://github.com/smack-team/smack/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	068ea721f8cc1bb7c62f3ca886ffe16a
+# Source0-md5:	dcd2034169432c4da7722965d661e629
 URL:		https://github.com/smack-team/smack
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.11
@@ -97,6 +97,7 @@ Dokumentacja API biblioteki SMACK.
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules \
 	%{?with_static_libs:--enable-static}
 %{__make}
 
