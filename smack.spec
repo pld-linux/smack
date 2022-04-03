@@ -2,6 +2,7 @@
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
 %bcond_without	static_libs	# don't build static libraries
+%bcond_without	systemd		# build without systemd
 
 Summary:	SMACK userspace package
 Summary(pl.UTF-8):	Pakiet SMACK dla przestrzeni użytkownika
@@ -19,7 +20,7 @@ BuildRequires:	automake >= 1:1.11
 BuildRequires:	doxygen
 BuildRequires:	libtool >= 2:2.2
 BuildRequires:	pkgconfig
-BuildRequires:	systemd-devel >= 1:198
+%{?with_systemd:BuildRequires:	systemd-devel >= 1:198}
 Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
